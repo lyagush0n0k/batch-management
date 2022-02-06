@@ -1,4 +1,4 @@
-set /A numDays=10
+set /A numDays=10  ::кол-во дней между выполнением скрипта
 
 reg query HKEY_CURRENT_USER\time
 if %ERRORLEVEL% EQU 1 reg add HKEY_CURRENT_USER\time /v day /t REG_SZ /d 100
@@ -15,4 +15,4 @@ if %dayPass% LSS %numDays% exit /b
 
 reg add HKEY_CURRENT_USER\time /v day /t REG_SZ /f /d %date%
 
-::Скрипт писать сюда
+::Скрипт писать сюда:
