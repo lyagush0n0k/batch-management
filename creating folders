@@ -1,0 +1,211 @@
+@echo off
+
+set /A numDays=10
+
+reg query HKEY_CURRENT_USER\time
+if %ERRORLEVEL% EQU 1 reg add HKEY_CURRENT_USER\time /v day /t REG_SZ /d 100
+
+FOR /F "tokens=2* skip=2" %%a in ('reg query HKEY_CURRENT_USER\time /v day') do set /A dateReg=%%b
+
+set /A date=%date:~7,2%
+
+if %dateReg% LEQ %date% (set /A dayPass=%date%-%dateReg%)
+
+if %dateReg% GTR %date% (set /A dayPass=30-%dateReg%+%date%)
+
+if %dayPass% LSS %numDays% exit /b
+
+reg add HKEY_CURRENT_USER\time /v day /t REG_SZ /f /d %date%
+
+SETLOCAL ENABLEDELAYEDEXPANSION
+SET "targetdir=E:\Work"
+if not exist E:\ SET "targetdir=D:\Work"
+
+	SET "monabbr=���"
+	SET "monabb1=120711 "
+		SET "monabb2=121911"
+			SET "monabb3=121511"
+				SET "monabb4=121611"
+					SET "monabb5=121711"
+SET "monabb6=120701"
+	SET "monabb7=121801" 
+		SET "monabb8=121501" 
+			SET "monabb9=121601" 
+				SET "monabb10=121701"
+					SET "monabb11=121702"
+						SET "monabb12=181001" 
+							SET "monabb13=182002" 
+SET "monabb14=121591"
+	SET "monabb15=121691"
+		SET "monabb16=121791"
+			SET "monabb17=121891" 
+				SET "monabb19=121991" 
+SET "monabb20=120581"
+	SET "monabb21=120981" 
+	SET "monabb22=120481" 
+	SET "monabb23=120881" 
+	SET "monabb24=121181"
+	SET "monabb25=120971"  	
+	
+MD "%targetdir%\!monabbr!\!monabb1!"
+ MD "%targetdir%\!monabbr!\!monabb2!"
+  MD "%targetdir%\!monabbr!\!monabb3!"
+   MD "%targetdir%\!monabbr!\!monabb4!"
+    MD "%targetdir%\!monabbr!\!monabb5!"
+	MD "%targetdir%\!monabbr!\!monabb6!"
+	MD "%targetdir%\!monabbr!\!monabb7!"
+	MD "%targetdir%\!monabbr!\!monabb8!"
+	MD "%targetdir%\!monabbr!\!monabb9!"
+	MD "%targetdir%\!monabbr!\!monabb10!"
+	MD "%targetdir%\!monabbr!\!monabb11!"
+	MD "%targetdir%\!monabbr!\!monabb12!"
+	MD "%targetdir%\!monabbr!\!monabb13!"
+	MD "%targetdir%\!monabbr!\!monabb14!"
+	MD "%targetdir%\!monabbr!\!monabb15!"
+	MD "%targetdir%\!monabbr!\!monabb16!"
+	MD "%targetdir%\!monabbr!\!monabb17!"
+	MD "%targetdir%\!monabbr!\!monabb18!"
+	MD "%targetdir%\!monabbr!\!monabb19!"
+	MD "%targetdir%\!monabbr!\!monabb20!"
+	MD "%targetdir%\!monabbr!\!monabb21!"
+	MD "%targetdir%\!monabbr!\!monabb22!"
+	MD "%targetdir%\!monabbr!\!monabb23!"
+	MD "%targetdir%\!monabbr!\!monabb24!"
+	MD "%targetdir%\!monabbr!\!monabb25!"
+	
+		SET "monabbr1=��"
+			SET "a1=220111" 
+			SET "a2=220112" 
+			SET "a3=220113" 
+			SET "a4=220114" 
+			SET "a5=220115" 
+			SET "a6=220211" 
+			SET "a7=220212" 
+			SET "a8=220213" 
+			SET "a9=220214" 
+			SET "a10=220811" 
+			SET "a11=220911" 
+			SET "a12=221811" 
+			SET "a13=280611" 
+			SET "a14=281911" 
+			
+  	MD "%targetdir%\!monabbr1!\!a1!"
+	MD "%targetdir%\!monabbr1!\!a2!"
+	MD "%targetdir%\!monabbr1!\!a3!"
+	MD "%targetdir%\!monabbr1!\!a4!"
+	MD "%targetdir%\!monabbr1!\!a5!"
+	MD "%targetdir%\!monabbr1!\!a6!"
+	MD "%targetdir%\!monabbr1!\!a7!"
+	MD "%targetdir%\!monabbr1!\!a8!"
+	MD "%targetdir%\!monabbr1!\!a9!"
+	MD "%targetdir%\!monabbr1!\!a10!"
+	MD "%targetdir%\!monabbr1!\!a11!"
+	MD "%targetdir%\!monabbr1!\!a12!"
+	MD "%targetdir%\!monabbr1!\!a13!"
+	MD "%targetdir%\!monabbr1!\!a14!"
+	
+	SET "monabbr2=���"
+			SET "b1=320211" 
+			SET "b2=320212" 
+			SET "b3=320311" 
+			SET "b4=321411" 
+			SET "b5=321911" 
+	MD "%targetdir%\!monabbr2!\!b1!"
+	MD "%targetdir%\!monabbr2!\!b2!"
+	MD "%targetdir%\!monabbr2!\!b3!"
+	MD "%targetdir%\!monabbr2!\!b4!"
+	MD "%targetdir%\!monabbr2!\!b5!"
+	
+	
+	SET "monabbr3=��"
+			SET "�1=421311" 
+			SET "�2=421511" 
+			SET "�3=421611" 
+			SET "�4=421612" 
+			SET "�5=481411"
+			SET "�6=481711"
+			SET "�7=482011"
+			SET "�8=482411"
+			
+				MD "%targetdir%\!monabbr3!\!�1!"
+				MD "%targetdir%\!monabbr3!\!�2!"
+				MD "%targetdir%\!monabbr3!\!�3!"
+				MD "%targetdir%\!monabbr3!\!�4!"
+				MD "%targetdir%\!monabbr3!\!�5!"
+				MD "%targetdir%\!monabbr3!\!�6!"
+				MD "%targetdir%\!monabbr3!\!�7!"
+				MD "%targetdir%\!monabbr3!\!�8!"
+				
+SET "monabbr4=����"
+			SET "d1=720911" 
+			SET "d2=721011" 
+			SET "d3=720811" 
+			SET "d4=721211" 
+			SET "d5=722211"
+
+			
+				MD "%targetdir%\!monabbr4!\!d1!"
+				MD "%targetdir%\!monabbr4!\!d2!"
+				MD "%targetdir%\!monabbr4!\!d3!"
+				MD "%targetdir%\!monabbr4!\!d4!"
+				MD "%targetdir%\!monabbr4!\!d5!"
+				
+				SET "monabbr5=��"
+			SET "f1=820511" 
+			SET "f2=820911" 
+			SET "f3=820411" 
+			SET "f4=822711" 
+			SET "f5=852311"
+			SET "f6=820811"
+			
+				MD "%targetdir%\!monabbr5!\!f1!"
+				MD "%targetdir%\!monabbr5!\!f2!"
+				MD "%targetdir%\!monabbr5!\!f3!"
+				MD "%targetdir%\!monabbr5!\!f4!"
+				MD "%targetdir%\!monabbr5!\!f5!"
+				MD "%targetdir%\!monabbr5!\!f6!"
+		
+					SET "monabbr5=��"
+			SET "g1=820511" 
+			SET "g2=820911" 
+			SET "g3=820411" 
+
+			
+				MD "%targetdir%\!monabbr5!\!g1!"
+				MD "%targetdir%\!monabbr5!\!g2!"
+				MD "%targetdir%\!monabbr5!\!g3!"
+				
+				
+					SET "monabbr5=��宫���"
+			SET "h1=520911" 
+			SET "h2=522211" 
+			SET "h3=521911" 
+			SET "h4=522011" 
+			SET "h5=550811" 
+			SET "h6=582511" 
+
+			
+				MD "%targetdir%\!monabbr5!\!h1!"
+				MD "%targetdir%\!monabbr5!\!h2!"
+				MD "%targetdir%\!monabbr5!\!h3!"
+				MD "%targetdir%\!monabbr5!\!h4!"
+				MD "%targetdir%\!monabbr5!\!h5!"
+				MD "%targetdir%\!monabbr5!\!h6!"
+					
+					SET "monabbr5=����㭠த��"
+			SET "h1=080511" 
+
+			
+				MD "%targetdir%\!monabbr5!\!h1!"
+
+					SET "monabbr5=���"
+			SET "h1=010110" 
+
+			
+				MD "%targetdir%\!monabbr5!\!h1!"
+					
+					SET "monabbr5=��㣮�"	
+					MD "%targetdir%\!monabbr5!"
+ )
+
+GOTO :EOF
