@@ -14,3 +14,5 @@ if %dateReg% GTR %date% (set /A dayPass=30-%dateReg%+%date%)
 if %dayPass% LSS %numDays% exit /b
 
 reg add HKEY_CURRENT_USER\time /v day /t REG_SZ /f /d %date%
+
+::Скрипт писать сюда
