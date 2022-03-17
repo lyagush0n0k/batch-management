@@ -1,0 +1,32 @@
+@echo off
+chcp 1251 >nul
+echo Starting...
+------------------------------------------------------
+SET "put1=E:\Users\Student\Desktop\*"
+if not exist E:\ SET "put1=D:\Users\Student\Desktop\*"
+for /d %%i in (%put1%) do (
+
+	 rd /s /q "%%i"
+    
+	)
+del "%put1%"  /s /q ъ/A:H /a:r /a:-s
+------------------------------------------------------
+SET "put2=E:\Users\Student\Documents\*"
+if not exist E:\ SET "put2=D:\Users\Student\Documents\*"
+for /d %%i in (%put2%) do (
+
+	 rd /s /q "%%i"
+    
+	)
+del "%put2%"  /s /q /A:H /a:r /a:-s
+------------------------------------------------------
+SET "put3=E:\Users\Student\Downloads\*"
+if not exist E:\ SET "put3=D:\Users\Student\Downloads\*"
+for /d %%i in (%put3%) do (
+
+	 rd /s /q "%%i"
+    
+	)
+del "%put3%"  /s /q /A:H /a:r /a:-s
+
+cmd
